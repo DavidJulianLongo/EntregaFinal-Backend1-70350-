@@ -1,18 +1,20 @@
 import { Router } from "express";
-import { productController } from "../controllers/product-controllers.js";
+import { prodController } from "../controllers/product-controller.js";
 
 
 const prodRouter = Router();
 
-prodRouter.get('/', productController.getAll); 
+prodRouter.get('/', prodController.getAll); 
 
-prodRouter.get('/:id', productController.getById);
+prodRouter.get('/:id', prodController.getById);
 
-prodRouter.post('/', productController.create);
+prodRouter.post('/file', prodController.createFileProds);
 
-prodRouter.put('/:id', productController.update);
+prodRouter.post('/', prodController.create);
 
-prodRouter.delete('/:id', productController.remove);
+prodRouter.put('/:id', prodController.update);
+
+prodRouter.delete('/:id', prodController.remove);
 
 
 export default prodRouter;

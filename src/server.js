@@ -26,22 +26,22 @@ app.use('/', viewsRouter);
 app.use(errorHandler);
 
 initMongoDB()
-    .then(() =>{
+    .then(() => {
         console.log('Connected to MongoDB')
         app.listen(8080, () => console.log("Server ok port 8080"));
-    } )
+    })
     .catch((error) => console.log(error));
 
 
-    
-   
+
+
 // const httpServer = app.listen(8080, () => console.log("Server ok port 8080"));
 
 // const socketServer = new Server(httpServer);
 
 // socketServer.on('connection', async (socket) => {
 
-//     // Emite todos los productos 
+//     // Emite todos los productos
 //     const products = await productsManager.getAllProd();
 //     socket.emit('updateProducts', products);
 
@@ -53,7 +53,7 @@ initMongoDB()
 //     })
 
 //     socket.on('deleteProd', async ({ id }) => {
-//         await productsManager.deleteProd(id) 
+//         await productsManager.deleteProd(id)
 //         const products = await productsManager.getAllProd();
 //         socketServer.emit('updateProducts', products);
 //     })

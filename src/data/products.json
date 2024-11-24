@@ -1,0 +1,611 @@
+[
+    {
+        "name": "Arroz 1kg",
+        "description": "Arroz blanco de grano largo",
+        "price": 150,
+        "stock": 50,
+        "category": "Alimentos"
+    },
+    {
+        "name": "Azúcar 1kg",
+        "description": "Azúcar refinada de caña",
+        "price": 90,
+        "stock": 30,
+        "category": "Alimentos"
+    },
+    {
+        "name": "Aceite 1L",
+        "description": "Aceite de girasol",
+        "price": 220,
+        "stock": 20,
+        "category": "Alimentos"
+    },
+    {
+        "name": "Fideos 500g",
+        "description": "Fideos de pasta italiana",
+        "price": 100,
+        "stock": 40,
+        "category": "Alimentos"
+    },
+    {
+        "name": "Harina 1kg",
+        "description": "Harina de trigo",
+        "price": 120,
+        "stock": 60,
+        "category": "Alimentos"
+    },
+    {
+        "name": "Leche 1L",
+        "description": "Leche entera",
+        "price": 130,
+        "stock": 70,
+        "category": "Lácteos"
+    },
+    {
+        "name": "Yogurt 1kg",
+        "description": "Yogurt natural",
+        "price": 200,
+        "stock": 50,
+        "category": "Lácteos"
+    },
+    {
+        "name": "Manteca 500g",
+        "description": "Manteca de vaca",
+        "price": 250,
+        "stock": 25,
+        "category": "Lácteos"
+    },
+    {
+        "name": "Queso cremoso 1kg",
+        "description": "Queso cremoso de vaca",
+        "price": 350,
+        "stock": 15,
+        "category": "Lácteos"
+    },
+    {
+        "name": "Pan de molde 500g",
+        "description": "Pan de molde blanco",
+        "price": 70,
+        "stock": 80,
+        "category": "Panadería"
+    },
+    {
+        "name": "Galletitas dulces 400g",
+        "description": "Galletitas rellenas de crema",
+        "price": 120,
+        "stock": 60,
+        "category": "Panadería"
+    },
+    {
+        "name": "Cereal 500g",
+        "description": "Cereal de maíz con azúcar",
+        "price": 150,
+        "stock": 40,
+        "category": "Desayuno"
+    },
+    {
+        "name": "Café 250g",
+        "description": "Café molido premium",
+        "price": 180,
+        "stock": 55,
+        "category": "Desayuno"
+    },
+    {
+        "name": "Jugo de naranja 1L",
+        "description": "Jugo de naranja 100% natural",
+        "price": 160,
+        "stock": 45,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Cerveza 1L",
+        "description": "Cerveza lager nacional",
+        "price": 250,
+        "stock": 30,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Vino tinto 750ml",
+        "description": "Vino tinto de la región de Mendoza",
+        "price": 500,
+        "stock": 20,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Agua mineral 2L",
+        "description": "Agua mineral sin gas",
+        "price": 50,
+        "stock": 100,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Coca-Cola 2L",
+        "description": "Bebida gaseosa cola",
+        "price": 150,
+        "stock": 30,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Limpido 500ml",
+        "description": "Limpido para limpiar superficies",
+        "price": 70,
+        "stock": 80,
+        "category": "Limpieza"
+    },
+    {
+        "name": "Detergente 1L",
+        "description": "Detergente líquido para platos",
+        "price": 120,
+        "stock": 60,
+        "category": "Limpieza"
+    },
+    {
+        "name": "Lavandina 1L",
+        "description": "Lavandina concentrada",
+        "price": 100,
+        "stock": 50,
+        "category": "Limpieza"
+    },
+    {
+        "name": "Papel higiénico 4 unidades",
+        "description": "Papel higiénico suave",
+        "price": 150,
+        "stock": 70,
+        "category": "Limpieza"
+    },
+    {
+        "name": "Jabón líquido 500ml",
+        "description": "Jabón líquido para manos",
+        "price": 80,
+        "stock": 90,
+        "category": "Higiene"
+    },
+    {
+        "name": "Shampoo 400ml",
+        "description": "Shampoo para cabello normal",
+        "price": 200,
+        "stock": 50,
+        "category": "Higiene"
+    },
+    {
+        "name": "Pasta dental 90g",
+        "description": "Pasta dental blanqueadora",
+        "price": 120,
+        "stock": 60,
+        "category": "Higiene"
+    },
+    {
+        "name": "Desodorante 150ml",
+        "description": "Desodorante en aerosol",
+        "price": 180,
+        "stock": 40,
+        "category": "Higiene"
+    },
+    {
+        "name": "Pañales 20 unidades",
+        "description": "Pañales para bebés",
+        "price": 300,
+        "stock": 30,
+        "category": "Higiene"
+    },
+    {
+        "name": "Toallas femeninas 10 unidades",
+        "description": "Toallas higiénicas",
+        "price": 130,
+        "stock": 40,
+        "category": "Higiene"
+    },
+    {
+        "name": "Cereal 500g",
+        "description": "Cereal integral",
+        "price": 140,
+        "stock": 50,
+        "category": "Desayuno"
+    },
+    {
+        "name": "Fruta: Manzana 1kg",
+        "description": "Manzanas frescas",
+        "price": 120,
+        "stock": 80,
+        "category": "Frutas"
+    },
+    {
+        "name": "Fruta: Banana 1kg",
+        "description": "Bananas frescas",
+        "price": 100,
+        "stock": 75,
+        "category": "Frutas"
+    },
+    {
+        "name": "Verduras: Lechuga 1 unidad",
+        "description": "Lechuga fresca",
+        "price": 50,
+        "stock": 60,
+        "category": "Verduras"
+    },
+    {
+        "name": "Verduras: Tomate 1kg",
+        "description": "Tomates frescos",
+        "price": 150,
+        "stock": 45,
+        "category": "Verduras"
+    },
+    {
+        "name": "Fruta: Pera 1kg",
+        "description": "Peras frescas",
+        "price": 130,
+        "stock": 40,
+        "category": "Frutas"
+    },
+    {
+        "name": "Fruta: Uva 1kg",
+        "description": "Uvas frescas",
+        "price": 200,
+        "stock": 35,
+        "category": "Frutas"
+    },
+    {
+        "name": "Fruta: Mandarina 1kg",
+        "description": "Mandarinas frescas",
+        "price": 80,
+        "stock": 50,
+        "category": "Frutas"
+    },
+    {
+        "name": "Arroz integral 1kg",
+        "description": "Arroz integral orgánico",
+        "price": 170,
+        "stock": 50,
+        "category": "Alimentos"
+    },
+    {
+        "name": "Fideos integrales 500g",
+        "description": "Fideos de trigo integral",
+        "price": 150,
+        "stock": 60,
+        "category": "Alimentos"
+    },
+    {
+        "name": "Avena 500g",
+        "description": "Avena en hojuelas",
+        "price": 90,
+        "stock": 70,
+        "category": "Desayuno"
+    },
+    {
+        "name": "Cereal de avena 500g",
+        "description": "Cereal de avena",
+        "price": 160,
+        "stock": 45,
+        "category": "Desayuno"
+    },
+    {
+        "name": "Té verde 50g",
+        "description": "Té verde orgánico",
+        "price": 200,
+        "stock": 30,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Aceitunas 500g",
+        "description": "Aceitunas verdes rellenas",
+        "price": 180,
+        "stock": 60,
+        "category": "Alimentos"
+    },
+    {
+        "name": "Tomate triturado 400g",
+        "description": "Tomate triturado en conserva",
+        "price": 120,
+        "stock": 40,
+        "category": "Alimentos"
+    },
+    {
+        "name": "Puré de tomate 500g",
+        "description": "Puré de tomate natural",
+        "price": 130,
+        "stock": 80,
+        "category": "Alimentos"
+    },
+    {
+        "name": "Pechuga de pollo 1kg",
+        "description": "Pechuga de pollo sin hueso",
+        "price": 300,
+        "stock": 50,
+        "category": "Carnes"
+    },
+    {
+        "name": "Carne de res 1kg",
+        "description": "Carne de res molida",
+        "price": 400,
+        "stock": 30,
+        "category": "Carnes"
+    },
+    {
+        "name": "Pescado congelado 1kg",
+        "description": "Filete de pescado congelado",
+        "price": 350,
+        "stock": 25,
+        "category": "Pescados"
+    },
+    {
+        "name": "Salchichas 500g",
+        "description": "Salchichas de cerdo",
+        "price": 180,
+        "stock": 60,
+        "category": "Carnes"
+    },
+    {
+        "name": "Yogurt griego 500g",
+        "description": "Yogurt griego natural",
+        "price": 250,
+        "stock": 50,
+        "category": "Lácteos"
+    },
+    {
+        "name": "Leche de almendras 1L",
+        "description": "Leche de almendras sin azúcar",
+        "price": 220,
+        "stock": 40,
+        "category": "Lácteos"
+    },
+    {
+        "name": "Crema de leche 200ml",
+        "description": "Crema de leche para cocinar",
+        "price": 150,
+        "stock": 70,
+        "category": "Lácteos"
+    },
+    {
+        "name": "Galletas saladas 400g",
+        "description": "Galletas saladas tipo crackers",
+        "price": 90,
+        "stock": 65,
+        "category": "Panadería"
+    },
+    {
+        "name": "Baguette 1 unidad",
+        "description": "Baguette de pan fresco",
+        "price": 50,
+        "stock": 90,
+        "category": "Panadería"
+    },
+    {
+        "name": "Pan de pizza 2 unidades",
+        "description": "Pan de pizza prehorneado",
+        "price": 120,
+        "stock": 50,
+        "category": "Panadería"
+    },
+    {
+        "name": "Croissants 6 unidades",
+        "description": "Croissants de manteca",
+        "price": 200,
+        "stock": 40,
+        "category": "Panadería"
+    },
+    {
+        "name": "Tostadas 300g",
+        "description": "Tostadas integrales",
+        "price": 100,
+        "stock": 75,
+        "category": "Desayuno"
+    },
+    {
+        "name": "Mermelada de fresa 250g",
+        "description": "Mermelada de fresa casera",
+        "price": 120,
+        "stock": 50,
+        "category": "Desayuno"
+    },
+    {
+        "name": "Miel 500g",
+        "description": "Miel pura de abeja",
+        "price": 150,
+        "stock": 40,
+        "category": "Desayuno"
+    },
+    {
+        "name": "Leche condensada 397g",
+        "description": "Leche condensada para repostería",
+        "price": 130,
+        "stock": 60,
+        "category": "Postres"
+    },
+    {
+        "name": "Chocolina 400g",
+        "description": "Galletas para postres",
+        "price": 90,
+        "stock": 80,
+        "category": "Postres"
+    },
+    {
+        "name": "Gelatina 85g",
+        "description": "Gelatina de frutilla",
+        "price": 40,
+        "stock": 100,
+        "category": "Postres"
+    },
+    {
+        "name": "Crema pastelera 250g",
+        "description": "Crema pastelera para repostería",
+        "price": 200,
+        "stock": 50,
+        "category": "Postres"
+    },
+    {
+        "name": "Galletitas de chocolate 400g",
+        "description": "Galletitas rellenas de chocolate",
+        "price": 120,
+        "stock": 65,
+        "category": "Golosinas"
+    },
+    {
+        "name": "Caramelos 300g",
+        "description": "Caramelos variados",
+        "price": 70,
+        "stock": 80,
+        "category": "Golosinas"
+    },
+    {
+        "name": "Chicles 30 unidades",
+        "description": "Paquete de chicles sabor menta",
+        "price": 50,
+        "stock": 100,
+        "category": "Golosinas"
+    },
+    {
+        "name": "Chocolates 200g",
+        "description": "Chocolate con leche",
+        "price": 150,
+        "stock": 60,
+        "category": "Golosinas"
+    },
+    {
+        "name": "Café instantáneo 100g",
+        "description": "Café instantáneo premium",
+        "price": 200,
+        "stock": 50,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Te helado 1L",
+        "description": "Té helado sabor durazno",
+        "price": 160,
+        "stock": 70,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Té negro 20 sobres",
+        "description": "Té negro en sobres",
+        "price": 120,
+        "stock": 80,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Infusión de manzanilla 20 sobres",
+        "description": "Infusión de manzanilla relajante",
+        "price": 110,
+        "stock": 90,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Cerveza sin alcohol 1L",
+        "description": "Cerveza sin alcohol sabor limón",
+        "price": 180,
+        "stock": 40,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Vino blanco 750ml",
+        "description": "Vino blanco de la región de Mendoza",
+        "price": 450,
+        "stock": 20,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Agua tónica 1L",
+        "description": "Agua tónica con quinina",
+        "price": 120,
+        "stock": 60,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Gaseosa de naranja 2L",
+        "description": "Gaseosa sabor naranja",
+        "price": 130,
+        "stock": 100,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Refresco de limón 500ml",
+        "description": "Refresco sabor limón",
+        "price": 70,
+        "stock": 80,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Detergente en barra 250g",
+        "description": "Detergente en barra para lavar ropa",
+        "price": 50,
+        "stock": 100,
+        "category": "Limpieza"
+    },
+    {
+        "name": "Limón 1kg",
+        "description": "Limones frescos",
+        "price": 120,
+        "stock": 90,
+        "category": "Frutas"
+    },
+    {
+        "name": "Ajo 200g",
+        "description": "Ajo fresco",
+        "price": 60,
+        "stock": 50,
+        "category": "Verduras"
+    },
+    {
+        "name": "Pimiento morrón 500g",
+        "description": "Pimientos morrones rojos",
+        "price": 100,
+        "stock": 60,
+        "category": "Verduras"
+    },
+    {
+        "name": "Espárragos 400g",
+        "description": "Espárragos en conserva",
+        "price": 160,
+        "stock": 40,
+        "category": "Verduras"
+    },
+    {
+        "name": "Pepino 1 unidad",
+        "description": "Pepino fresco",
+        "price": 50,
+        "stock": 100,
+        "category": "Verduras"
+    },
+    {
+        "name": "Zanahorias 1kg",
+        "description": "Zanahorias frescas",
+        "price": 80,
+        "stock": 90,
+        "category": "Verduras"
+    },
+    {
+        "name": "Papas 2kg",
+        "description": "Papas frescas",
+        "price": 150,
+        "stock": 60,
+        "category": "Verduras"
+    },
+    {
+        "name": "Fresas 300g",
+        "description": "Fresas frescas",
+        "price": 120,
+        "stock": 50,
+        "category": "Frutas"
+    },
+    {
+        "name": "Uvas 500g",
+        "description": "Uvas rojas frescas",
+        "price": 160,
+        "stock": 30,
+        "category": "Frutas"
+    },
+    {
+        "name": "Peras 1kg",
+        "description": "Peras frescas",
+        "price": 150,
+        "stock": 40,
+        "category": "Frutas"
+    },
+    {
+        "name": "Manzanas 1kg",
+        "description": "Manzanas frescas",
+        "price": 130,
+        "stock": 50,
+        "category": "Frutas"
+    }
+]

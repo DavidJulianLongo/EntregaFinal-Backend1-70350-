@@ -6,6 +6,7 @@ class ProdDaoMongoDB extends DaoMongoDB {
     constructor() {
         super(prodModel);
     }
+
 }
 
 export const prodDao = new ProdDaoMongoDB();

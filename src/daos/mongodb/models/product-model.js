@@ -20,6 +20,10 @@ const productSchema = new Schema({
         required: [true, 'Product stock is required'],
         min: [0, 'Stock must be a positive value']
     },
+    category: {
+        type: String,
+        required: [true, 'Product category is required']
+    },
 });
 
 export const prodModel = model('product', productSchema);

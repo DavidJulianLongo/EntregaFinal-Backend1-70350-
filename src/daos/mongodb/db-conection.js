@@ -6,8 +6,7 @@ const MONGO_URL = process.env.MONGO_URL;
 export const initMongoDB = async () => {
     try {
         await connect(MONGO_URL);
-        const db = await connect(MONGO_URL);
-        console.log('Conexión a la base de datos:', db.connection.name);
+        console.log('MongoDB connection established successfully.');
     } catch (error) {
         throw new Error(error);
     }
