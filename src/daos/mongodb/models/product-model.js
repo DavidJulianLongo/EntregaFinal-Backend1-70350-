@@ -24,6 +24,11 @@ const productSchema = new Schema({
         type: String,
         required: [true, 'Product category is required']
     },
+    item_code:{
+        type: String,
+        unique: true,
+        required: true
+    }
 });
 
 export const prodModel = model('product', productSchema);

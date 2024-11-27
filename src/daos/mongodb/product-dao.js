@@ -7,6 +7,16 @@ class ProdDaoMongoDB extends DaoMongoDB {
         super(prodModel);
     }
 
+
+    // Busca el producto en la base de datos usando el item_code
+    async getItemCode(item_code) {
+        try {
+            const product = await this.model.findOne({ item_code });
+            return product; 
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
-export const prodDao = new ProdDaoMongoDB();
+    export const prodDao = new ProdDaoMongoDB();
