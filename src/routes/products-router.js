@@ -10,7 +10,7 @@ prodRouter.get('/:id', prodController.getById);
 
 prodRouter.post('/file', prodController.createFileProds);
 
-prodRouter.post('/', prodController.create);
+prodRouter.post('/', prodController.createProd);
 
 prodRouter.put('/:id', prodController.update);
 

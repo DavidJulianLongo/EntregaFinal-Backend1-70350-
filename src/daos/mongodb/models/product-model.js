@@ -27,7 +27,6 @@ const productSchema = new Schema({
     item_code:{
         type: String,
         unique: true,
-        required: true
     }
 });
 

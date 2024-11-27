@@ -1,5 +1,4 @@
 import BaseService from "./base-service.js";
-// import { prodDao } from "../daos/filesystem/product-dao.js";
 import { prodDao } from "../daos/mongodb/product-dao.js";
 import fs from 'fs';
 import path from 'path';
@@ -11,21 +10,23 @@ class ProductService extends BaseService {
         super(prodDao)
     }
 
+    //Agreg aun item_code a los con uuidv4 a los prods del JSON, para poder hacer la comparación
+    //y evitar agregarlos por dupicados
     async createFileProds() {
         try {
             const filePath = `${path.join(process.cwd(), 'src/data/products.json')}`;
             const prodFiles = JSON.parse(fs.readFileSync(filePath));
-    
+
             const productsWithCode = prodFiles.map(prod => ({
                 ...prod,
                 item_code: prod.item_code || uuidv4(),
             }));
-    
+
             fs.writeFileSync(filePath, JSON.stringify(productsWithCode));
-    
+
             let duplicatedCount = 0;
             let duplicatedCodes = [];
-    
+
             for (const product of productsWithCode) {
                 const existingProduct = await prodDao.getItemCode(product.item_code);
                 if (existingProduct) {
@@ -35,16 +36,15 @@ class ProductService extends BaseService {
                     await prodDao.create(product);
                 }
             }
-    
+
             if (duplicatedCount > 0) {
-                throw new CustomError(`There are ${duplicatedCount} duplicated products with the following item_codes:\n${duplicatedCodes.join('\n')}`, 400);
+                throw new CustomError(`There are ${duplicatedCount} duplicated products`, 400);
             }
             return `${productsWithCode.length - duplicatedCount}`;
         } catch (error) {
             throw error;
         }
     }
-    
 }
 
 

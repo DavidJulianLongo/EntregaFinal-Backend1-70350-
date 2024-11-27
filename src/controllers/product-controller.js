@@ -6,6 +6,15 @@ class ProductController extends BaseController {
         super(prodService); 
     }
 
+    async createProd(req, res, next) {
+        try {
+            const newItem = await prodService.createProd(req.body);
+            res.json(newItem);
+        } catch (error) {
+            next(error);
+        }
+    }
+
     async createFileProds(req, res, next) {
         try {
             const response = await prodService.createFileProds();
@@ -19,56 +28,3 @@ class ProductController extends BaseController {
 export const prodController = new ProductController();
 
 
-// class ProductController {
-
-//     async getAll(req, res, next) {
-//         try {
-//             const products = await prodService.getAll();
-//             res.json(products);
-//         } catch (error) {
-//             next(error);
-//         }
-//     }
-
-//     async getById(req, res, next) {
-//         try {
-//             const { id } = req.params;
-//             const product = await prodService.getById(id);
-//             res.json(product);
-//         } catch (error) {
-//             next(error);
-//         }
-//     }
-
-//     async create(req, res, next) {
-//         try {
-//             const newProduct = await prodService.create(req.body);
-//             res.json(newProduct); 
-//         } catch (error) {
-//             next(error);
-//         }
-//     }
-
-//     async update(req, res, next) {
-//         try {
-//             const { id } = req.params;
-//             const updatedProduct = await prodService.update(id, req.body);
-//             res.json(updatedProduct);
-//         } catch (error) {
-//             next(error);
-//         }
-//     }
-
-//     async remove(req, res, next) {
-//         try {
-//             const { id } = req.params;
-//             const deletedProduct = await prodService.remove(id);
-//             res.json(deletedProduct);
-//         } catch (error) {
-//             next(error);
-//         }
-//     }
-// };
-
-
-// export const productController = new ProductController();
