@@ -10,6 +10,16 @@ class ProductService extends BaseService {
         super(prodDao)
     }
 
+    async getAll(page, limit, query, sort) {
+        try {
+            const response = await prodDao.getAll(page, limit, query, sort);
+            return response;
+        } catch (error) {
+            throw error;
+        }
+    }
+
+
     //Agreg aun item_code a los con uuidv4 a los prods del JSON, para poder hacer la comparación
     //y evitar agregarlos por dupicados
     async createFileProds() {

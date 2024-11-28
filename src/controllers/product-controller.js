@@ -3,17 +3,39 @@ import { prodService } from "../services/product-service.js";
 
 class ProductController extends BaseController {
     constructor() {
-        super(prodService); 
+        super(prodService);
     }
 
-    async createProd(req, res, next) {
+
+    async getAll(req, res, next) {
         try {
-            const newItem = await prodService.createProd(req.body);
-            res.json(newItem);
+            const { page, limit, query, sort } = req.query;
+            const response = await prodService.getAll(page, limit, query, sort);
+            res.json({
+                status: response.docs.length > 0? 'success' : 'error',
+                payload: response.docs,
+                totalPages: response.totalPages,
+                prevPage: response.prevPage,
+                nextPage: response.nextPage,
+                page: response.page,
+                hasPrevPage: response.hasPrevPage,
+                hasNextPage: response.hasNextPage,
+                prevLink: response.hasPrevPage ? `http://localhost:8080/products?limit=${limit}&page=${response.prevPage}&sort=${sort}&query=${query}`: null, 
+                nextLink: response.hasNextPage ? `http://localhost:8080/products?limit=${limit}&page=${response.nextPage}&sort=${sort}&query=${query}` : null
+            });
         } catch (error) {
             next(error);
         }
     }
+
+    // async createProd(req, res, next) {
+    //     try {
+    //         const newItem = await prodService.createProd(req.body);
+    //         res.json(newItem);
+    //     } catch (error) {
+    //         next(error);
+    //     }
+    // }
 
     async createFileProds(req, res, next) {
         try {
