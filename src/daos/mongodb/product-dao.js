@@ -1,5 +1,6 @@
 import DaoMongoDB from './mongo-dao.js';
 import { prodModel } from './models/product-model.js';
+import { Error } from 'mongoose';
 
 
 class ProdDaoMongoDB extends DaoMongoDB {
@@ -26,7 +27,8 @@ class ProdDaoMongoDB extends DaoMongoDB {
             const product = await prodModel.findOne({ item_code });
             return product; 
         } catch (error) {
-            throw error;
+            throw new Error(error);
+            ;
         }
     }
 }

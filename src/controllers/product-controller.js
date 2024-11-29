@@ -6,7 +6,6 @@ class ProductController extends BaseController {
         super(prodService);
     }
 
-
     async getAll(req, res, next) {
         try {
             const { page, limit, query, sort } = req.query;
@@ -28,15 +27,7 @@ class ProductController extends BaseController {
         }
     }
 
-    // async createProd(req, res, next) {
-    //     try {
-    //         const newItem = await prodService.createProd(req.body);
-    //         res.json(newItem);
-    //     } catch (error) {
-    //         next(error);
-    //     }
-    // }
-
+    
     async createFileProds(req, res, next) {
         try {
             const response = await prodService.createFileProds();

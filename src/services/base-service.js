@@ -1,4 +1,3 @@
-// import { prodDao } from '../daos/filesystem/product-dao.js';
 import {CustomError} from '../utils/error-custom.js'
 
 class BaseService {
