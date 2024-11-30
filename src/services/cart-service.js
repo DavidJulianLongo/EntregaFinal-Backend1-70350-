@@ -13,7 +13,7 @@ class CartService extends BaseService {
         try {
             const cart = await cartDao.getById(cartId);
             if (!cart) throw new CustomError(`Cart with ID: ${cartId} not found`, 404);
-            
+
             const product = await prodDao.getById(prodId);
             if (!product) throw new CustomError(`Product with ID: ${prodId} not found`, 404);
 
@@ -39,9 +39,33 @@ class CartService extends BaseService {
 
     async getCartById(cartId) {
         try {
-            const cart = await cartDao.getById(cartId);
+            const cart = await cartDao.getByIdPop(cartId);
             if (!cart) throw new CustomError(`Cart with ID: ${cartId} not found`, 404);
             return cart
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    async updateCartProds(cartId, products) {
+        try {
+            const cart = await cartDao.getById(cartId);
+            if (!cart) throw new CustomError(`Cart with ID: ${cartId} not found`, 404);
+
+            if (!Array.isArray(products) || products.some(p => !p.product || !p.quantity)) {
+                throw new CustomError("Invalid products format. Each item must have 'product' and 'quantity'.", 400);
+            }
+            for (const item of products) {
+                const productExists = await prodDao.getById(item.product);
+                if (!productExists) throw new CustomError(`Product with ID: ${item.product} not found`, 404);
+            }
+
+            for (const item of products) {
+                await this.addProdToCart(cartId, item.product, item.quantity);
+            }
+            const updatedCart = await cartDao.getById(cartId);
+            if (!updatedCart) throw new CustomError('Failed to update cart', 500);
+            return updatedCart;
         } catch (error) {
             throw error;
         }
@@ -76,13 +100,13 @@ class CartService extends BaseService {
         try {
             const cart = await cartDao.getById(cartId);
             if (!cart) throw new CustomError(`Cart with ID: ${cartId} not found`, 404);
-    
+
             const updatedCart = await cartDao.update(
                 { _id: cartId },
                 { $set: { products: [] } },
                 { new: true }
             );
-    
+
             return updatedCart;
         } catch (error) {
             throw error;

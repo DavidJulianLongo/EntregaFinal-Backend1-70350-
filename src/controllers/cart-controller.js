@@ -19,7 +19,7 @@ class CartController extends BaseController {
     async getCartById(req, res, next) {
         try {
             const { cid } = req.params;
-            const cart = await cartService.getById(cid);
+            const cart = await cartService.getCartById(cid);
             res.json(cart);
         } catch (error) {
             next(error);
@@ -40,6 +40,19 @@ class CartController extends BaseController {
         }
     }
 
+    async updateCartProds (req, res, next){
+        try {
+            const {cid} = req.params;
+            const products = req.body;
+            const updatedCart = await cartService.updateCartProds(cid, products);
+            res.json({
+                message: 'Cart updated successfully',
+                cart: updatedCart
+            });
+    } catch (error) {
+            next(error);
+        }
+    }
 
     async removeProd(req, res, next) {
         try {

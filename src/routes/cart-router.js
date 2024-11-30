@@ -13,6 +13,8 @@ cartRouter.post('/:cid/product/:pid', cartController.addProdToCart);
 
 cartRouter.put('/:cid/products/:pid', cartController.updateProdQuantity);
 
+cartRouter.put('/:cid/', cartController.updateCartProds);
+
 cartRouter.delete('/:cid/products/:pid', cartController.removeProd);
 
 cartRouter.delete('/:cid', cartController.removeAllProds);

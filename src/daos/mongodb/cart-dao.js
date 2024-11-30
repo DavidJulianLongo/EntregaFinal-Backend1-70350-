@@ -7,7 +7,7 @@ class CartDaoMongoDB extends DaoMongoDB {
         super(cartModel);
     }
 
-    async getById(cartId) {
+    async getByIdPop(cartId) {
         try {
             return await cartModel.findById(cartId).populate('products.product');
         } catch (error) {
