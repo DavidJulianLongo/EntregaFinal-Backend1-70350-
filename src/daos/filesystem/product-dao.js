@@ -74,5 +74,4 @@ class prodDaoFS {
 
 };
 
-
 export const prodDao = new prodDaoFS(path.join(process.cwd(), 'src/daos/filesystem/data/products.json'));
