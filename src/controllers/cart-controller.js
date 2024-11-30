@@ -3,7 +3,7 @@ import { cartService } from '../services/cart-service.js';
 
 class CartController extends BaseController {
     constructor() {
-        super(cartService);  
+        super(cartService);
     }
 
     async addProdToCart(req, res, next) {
@@ -26,6 +26,46 @@ class CartController extends BaseController {
         }
     }
 
+    async updateProdQuantity(req, res, next) {
+        try {
+            const { cid, pid } = req.params;
+            const { quantity } = req.body;
+            const updatedCart = await cartService.addProdToCart(cid, pid, quantity);
+            res.json({
+                message: 'Product quantity updated successfully',
+                cart: updatedCart
+            })
+        } catch (error) {
+            next(error)
+        }
+    }
+
+
+    async removeProd(req, res, next) {
+        try {
+            const { cid, pid } = req.params;
+            const deletedItem = await cartService.remove(cid, pid);
+            res.json({
+                message: `Product with ID: ${pid} successfully removed`,
+                cart: deletedItem
+            });
+        } catch (error) {
+            next(error)
+        }
+    }
+
+    async removeAllProds(req, res, next) {
+        try {
+            const { cid } = req.params;
+            const updatedCart = await cartService.removeAll(cid);
+            res.json({
+                message: 'The cart was successfully emptied',
+                cart: updatedCart
+            });
+        } catch (error) {
+            next(error);
+        }
+    }
 }
 
 export const cartController = new CartController();

@@ -31,7 +31,7 @@ class ProductController extends BaseController {
     async createFileProds(req, res, next) {
         try {
             const response = await prodService.createFileProds();
-            res.json(`${response} products inserted correctly`);
+            res.json({response});
         } catch (error) {
             next(error);
         }

@@ -1,7 +1,5 @@
 import DaoMongoDB from './mongo-dao.js';
 import { cartModel } from './models/cart-model.js';
-import { cartService } from '../../services/cart-service.js';
-
 
 
 class CartDaoMongoDB extends DaoMongoDB {
@@ -9,28 +7,22 @@ class CartDaoMongoDB extends DaoMongoDB {
         super(cartModel);
     }
 
-    async addProdToCart(cartId, prodId) {
+    async getById(cartId) {
         try {
-            const updatedCart = await cartModel.findByIdAndUpdate(
-                cartId,
-                { $push: { products: prodId } },
-                { new: true }
-            );
-            return updatedCart;
+            return await cartModel.findById(cartId).populate('products.product');
         } catch (error) {
-            throw new Error(error);
+            throw error
         }
     }
 
-    async getById(cartId) {
+    async findOneAndUpdate(cartId, prodId, quantity) {
         try {
-            const cart = await cartModel.findById(cartId).populate('products')
-            console.log(cart);
-            return cart;
+            return await cartModel.findOneAndUpdate(cartId, prodId, quantity);
         } catch (error) {
-            throw new Error(`Error fetching cart by ID: ${error.message}`);
+            throw error;
         }
     }
+
 };
 
 export const cartDao = new CartDaoMongoDB();
