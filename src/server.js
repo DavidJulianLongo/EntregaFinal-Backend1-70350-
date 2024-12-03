@@ -5,6 +5,7 @@ import prodRouter from './routes/products-router.js';
 import cartRouter from './routes/cart-router.js';
 import { initMongoDB } from './daos/mongodb/db-conection.js';
 import { errorHandler } from './middlewares/errorHandler.js';
+import viewsRouter from './routes/views-router.js';
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.set('views', path.join(process.cwd(), "src", "views"));
 // Rutas de productos y carrito
 app.use('/products', prodRouter);
 app.use('/api/carts', cartRouter);
+app.use('/', viewsRouter);
 
 
 // Middleware de manejo de errores

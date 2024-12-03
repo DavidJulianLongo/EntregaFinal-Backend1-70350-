@@ -1,0 +1,53 @@
+<div class="product-table">
+    <h2>Lista de productos</h2>
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Categoría</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each products}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>${{this.price}}</td>
+                <td>{{this.stock}}</td>
+                <td>{{this.category}}</td>
+                <td>
+                    <a href="/products/{{this._id}}" class="view-details">Ver detalles</a> |
+                    <form action="/cart/add" method="POST" style="display:inline;">
+                        <input type="hidden" name="productId" value="{{this._id}}">
+                        <button type="submit">Agregar al carrito</button>
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
+<!-- Paginación -->
+<div class="pagination">
+    <div class="pagination-link-container">
+        {{#if hasPrevPage}}
+        <a href="?page={{prevPage}}" class="pagination-link">Anterior</a>
+        {{else}}
+        <span class="pagination-link disabled">Anterior</span>
+        {{/if}}
+    </div>
+
+    <span class="page-info">Página {{currentPage}} de {{totalPages}}</span>
+
+    <div class="pagination-link-container">
+        {{#if hasNextPage}}
+        <a href="?page={{nextPage}}" class="pagination-link">Siguiente</a>
+        {{else}}
+        <span class="pagination-link disabled">Siguiente</span>
+        {{/if}}
+    </div>
+</div>
+
