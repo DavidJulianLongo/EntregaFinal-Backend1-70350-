@@ -1,27 +1,38 @@
 <div class="product-detail">
     <h1>{{product.name}}</h1>
-    <table class="product-table">
-        <tr>
-            <td><strong>Descripción:</strong></td>
-            <td>{{product.description}}</td>
-        </tr>
-        <tr>
-            <td><strong>Precio:</strong></td>
-            <td>${{product.price}}</td>
-        </tr>
-        <tr>
-            <td><strong>Categoría:</strong></td>
-            <td>{{product.category}}</td>
-        </tr>
-        <tr>
-            <td><strong>Stock:</strong></td>
-            <td>{{product.stock}}</td>
-        </tr>
-        <tr>
-            <td><strong>Código de artículo:</strong></td>
-            <td>{{product.item_code}}</td>
-        </tr>
-    </table>
+    <div class="product-table-detail">
+        <h2>Detalles del producto</h2>
+        <table >
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Descripción:</strong></td>
+                    <td>{{product.description}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Precio:</strong></td>
+                    <td>${{product.price}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Categoría:</strong></td>
+                    <td>{{product.category}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Stock:</strong></td>
+                    <td>{{product.stock}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Código de artículo:</strong></td>
+                    <td>{{product.item_code}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <!-- Botón para agregar al carrito -->
     <form action="/cart/add" method="POST" style="display:inline;">

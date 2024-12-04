@@ -14,8 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', express.static(path.join(process.cwd(), "src", "public")));
 
 app.engine('handlebars', handlebars.engine());
-app.set('view engine', 'handlebars');
 app.set('views', path.join(process.cwd(), "src", "views"));
+app.set('view engine', 'handlebars');
 
 // Rutas de productos y carrito
 app.use('/products', prodRouter);

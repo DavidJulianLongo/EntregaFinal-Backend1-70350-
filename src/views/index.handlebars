@@ -1,6 +1,6 @@
 <div class="product-table">
     <h2>Lista de productos</h2>
-    <table id="productTable">
+    <table>
         <thead>
             <tr>
                 <th>Nombre</th>
@@ -18,7 +18,7 @@
                 <td>{{this.stock}}</td>
                 <td>{{this.category}}</td>
                 <td>
-                    <a href="/products/{{this._id}}" class="view-details">Ver detalles</a> |
+                    <a href="/item/{{this._id}}" class="view-details">Ver detalles</a> |
                     <form action="/cart/add" method="POST" style="display:inline;">
                         <input type="hidden" name="productId" value="{{this._id}}">
                         <button type="submit">Agregar al carrito</button>
